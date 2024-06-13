@@ -1,0 +1,22 @@
+El algoritmo de Recocido Simulado (Simulated Annealing) es útil cuando no se tiene una solución efectiva a un problema específico y se necesita explorar el espacio de soluciones de manera más amplia para encontrar soluciones aceptables. Este algoritmo está inspirado en el proceso físico del recocido de metales, donde un material se calienta y luego se enfría lentamente para alcanzar un estado de mínima energía, evitando quedarse atrapado en mínimos locales.
+
+Para aplicar el Recocido Simulado a un problema específico, como por ejemplo el problema del viajante de comercio (TSP, Traveling Salesman Problem), se puede seguir un enfoque similar al algoritmo de búsqueda del vecino más cercano que discutimos anteriormente. Sin embargo, en lugar de siempre elegir la mejor opción local (la ciudad más cercana en cada paso), el Recocido Simulado permitirá moverse a soluciones peores con cierta probabilidad, lo cual ayuda a evitar quedar atrapado en óptimos locales subóptimos.
+
+Aquí tienes un ejemplo simplificado de cómo se podría aplicar el Recocido Simulado al problema del TSP:
+
+Inicialización:
+
+Se elige una solución inicial aleatoria o mediante un algoritmo constructivo como el de vecino más cercano.
+Se define una temperatura inicial y un factor de enfriamiento que controlará cómo disminuye la temperatura a lo largo del tiempo.
+Bucle Principal:
+
+Se itera hasta que la temperatura alcance un valor mínimo:
+Generación de Vecino: Se genera una solución vecina perturbando la solución actual. Esto puede hacerse intercambiando el orden de visitas de dos ciudades, por ejemplo.
+Evaluación de Vecino: Se evalúa la nueva solución calculando su costo, es decir, la distancia total recorrida en el TSP.
+Aceptación de Vecino: Se decide si se acepta la nueva solución:
+Si mejora la solución actual (menor costo en el caso del TSP), se acepta.
+Si empeora la solución, se acepta con una probabilidad determinada por la temperatura actual y la magnitud del empeoramiento. Esto permite salir de óptimos locales subóptimos.
+Actualización: Se actualiza la temperatura y se repite el proceso.
+Condición de Parada:
+
+El proceso termina cuando la temperatura alcanza un valor mínimo predefinido o cuando se han realizado suficientes iteraciones.

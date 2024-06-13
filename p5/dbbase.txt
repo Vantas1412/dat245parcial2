@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS conexiones (
+    origen VARCHAR(1),
+    destino VARCHAR(1),
+    peso INT
+);
+
+INSERT INTO conexiones (origen, destino, peso) VALUES ('A', 'C', 9);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('A', 'B', 7);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('A', 'D', 8);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('A', 'E', 20);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('B', 'A', 7);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('B', 'C', 10);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('B', 'D', 4);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('B', 'E', 11);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('C', 'A', 9);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('C', 'E', 5);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('C', 'D', 15);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('C', 'B', 10);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('D', 'B', 4);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('D', 'E', 17);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('D', 'C', 15);
+INSERT INTO conexiones (origen, destino, peso) VALUES ('D', 'A', 8);
